@@ -2,619 +2,302 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#21170f">
+<meta name="description" content="هنا إبراء | شبكة إعلامية من قلب ولاية إبراء — نرصد الخبر، نغطي الحدث، ونوثّق التراث.">
 <title>هنا إبراء | شبكة إعلامية</title>
 <link rel="icon" type="image/png" href="huna-ibra-logo-transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #21170f;
-  --sand: #a17d61;
-  --sand-light: #cdb59e;
-  --cream: #f5efe7;
-  --paper: #fbf9f6;
-  --line: rgba(58, 39, 26, 0.12);
-  --radius: 16px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Cairo', system-ui, -apple-system, sans-serif;
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.container {
-  width: 100%;
-  max-width: 1180px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin: 0 auto;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(251, 249, 246, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-  padding: 10px 0;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 900;
-  font-size: 15px;
-}
-
-.brand img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.brand small {
-  display: block;
-  font-size: 8px;
-  color: #866d59;
-}
-
-.links {
-  display: flex;
-  gap: 18px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.menu-btn {
-  display: none;
-  background: var(--ink);
-  color: #fff;
-  border: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
-  font-size: 20px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.hero {
-  padding-top: 100px;
-  padding-bottom: 40px;
-  background: radial-gradient(circle at 80% 20%, rgba(205,181,158,0.25), transparent 40%), var(--paper);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 24px;
-}
-
-.kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border: 1px solid var(--line);
-  border-radius: 50px;
-  background: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--sand);
-}
-
-.hero h1 {
-  font-size: clamp(26px, 6vw, 52px);
-  line-height: 1.25;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.hero h1 span {
-  color: var(--sand);
-}
-
-.hero p {
-  font-size: clamp(14px, 3.5vw, 17px);
-  color: #695748;
-  margin-bottom: 20px;
-}
-
-.actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 800;
-  font-size: 13px;
-  border: 1px solid var(--line);
-  text-align: center;
-  flex: 1;
-  min-width: 130px;
-}
-
-.btn.primary {
-  background: var(--ink);
-  color: #fff;
-}
-
-.btn.light {
-  background: #fff;
-  color: var(--ink);
-}
-
-.hero-logo img {
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-}
-
-.ticker {
-  background: var(--ink);
-  color: #fff;
-  padding: 8px 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ticker-track {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  animation: ticker 20s linear infinite;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-section {
-  padding: 40px 0;
-}
-
-.section-head {
-  margin-bottom: 20px;
-}
-
-.eyebrow {
-  font-size: 10px;
-  color: var(--sand);
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.section-head h2 {
-  font-size: clamp(20px, 4vw, 32px);
-  font-weight: 900;
-  margin-top: 4px;
-}
-
-.section-head p {
-  font-size: 13px;
-  color: #776556;
-  margin-top: 4px;
-}
-
-.visuals {
-  background: #eee7df;
-}
-
-.visual-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.visual {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  height: 180px;
-  background: #d7c6b5;
-}
-
-.visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.visual span {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  left: 8px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-}
-
-.filterbar {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  margin-bottom: 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.filterbar::-webkit-scrollbar {
-  display: none;
-}
-
-.filter {
-  border: 1px solid var(--line);
-  background: #fff;
-  color: var(--ink);
-  padding: 6px 14px;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 700;
-  white-space: nowrap;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.filter.active {
-  background: var(--ink);
-  color: #fff;
-}
-
-.directory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 14px;
-}
-
-.directory-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.directory-card.hidden {
-  display: none;
-}
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cat {
-  background: var(--cream);
-  color: #806650;
-  font-size: 10px;
-  font-weight: 800;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-.index {
-  font-size: 11px;
-  color: var(--sand-light);
-  font-weight: 800;
-}
-
-.directory-image {
-  height: 140px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--cream);
-}
-
-.directory-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.directory-card h3 {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.directory-card p {
-  font-size: 12px;
-  color: #796657;
-  flex: 1;
-}
-
-.card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: auto;
-  padding-top: 8px;
-}
-
-.map-btn {
-  background: var(--ink);
-  color: #fff;
-  text-align: center;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.phone {
-  font-size: 11px;
-  color: #806b59;
-  text-align: center;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.stat {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 12px;
-  text-align: center;
-}
-
-.stat strong {
-  display: block;
-  font-size: 22px;
-  color: var(--sand);
-}
-
-.stat span {
-  font-size: 10px;
-  color: #786455;
-}
-
-.contact {
-  background: var(--cream);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.contactbox {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.socials {
-  display: flex;
-  gap: 8px;
-}
-
-.social {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 12px;
-}
-
-.guide-section {
-  background: #eee5da;
-}
-
-.guide-box {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.guide-btn {
-  background: var(--ink);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-footer {
-  background: #18110c;
-  color: #cfc1b4;
-  padding: 30px 0 16px;
-}
-
-.footergrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-.footerbrand img {
-  width: 120px;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-}
-
-.footerbrand p {
-  font-size: 12px;
-  color: #a99a8d;
-  margin-top: 6px;
-}
-
-footer h4 {
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-footer a {
-  display: block;
-  font-size: 12px;
-  color: #a99a8d;
-  margin-bottom: 4px;
-}
-
-.copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 20px;
-  padding-top: 12px;
-  font-size: 10px;
-  color: #81746a;
-  display: flex;
-  justify-content: space-between;
-}
-
-@media (max-width: 768px) {
-  .menu-btn {
-    display: flex;
-  }
-
-  .links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fbf9f6;
-    flex-direction: column;
-    gap: 0;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  }
-
-  .links.open {
-    display: flex;
-  }
-
-  .links a {
-    padding: 12px 20px;
-    border-bottom: 1px solid rgba(58, 39, 26, 0.05);
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-logo {
-    order: -1;
-  }
-
-  .actions {
-    justify-content: center;
-  }
-
-  .btn {
-    width: 100%;
-    flex: none;
-  }
-
-  .stats {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 769px) {
-  .footergrid {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-}
+:root{
+  --ink:#21170f;
+  --ink2:#39271a;
+  --sand:#a17d61;
+  --sand2:#cdb59e;
+  --cream:#f5efe7;
+  --paper:#fbf9f6;
+  --white:#fff;
+  --line:rgba(58,39,26,.13);
+  --shadow:0 22px 70px rgba(46,31,20,.12);
+  --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Cairo","IBM Plex Sans Arabic",system-ui,sans-serif;
+  background:var(--paper);color:var(--ink);overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.topline{
+  height:4px;background:linear-gradient(90deg,transparent,var(--sand),#e2d2c2,var(--sand),transparent);
+}
+header{
+  position:fixed;top:4px;left:0;right:0;z-index:50;
+  padding:14px 0;transition:.45s ease;
+}
+header.scrolled{
+  background:rgba(251,249,246,.82);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(33,23,15,.08);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900}
+.brand img{width:54px;height:54px;object-fit:contain}
+.brand span{line-height:1.1}
+.brand small{display:block;font-size:10px;color:#866d59;letter-spacing:.4px;direction:ltr;text-align:right;margin-top:3px}
+.links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:700}
+.links a{position:relative;padding:7px 0}
+.links a:after{
+  content:"";position:absolute;right:0;bottom:0;width:0;height:2px;
+  background:var(--sand);transition:.3s
+}
+.links a:hover:after{width:100%}
+.menu{display:none;border:0;background:var(--ink);color:#fff;border-radius:14px;width:45px;height:45px}
+.hero{
+  min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 30%,rgba(205,181,158,.30),transparent 25%),
+    radial-gradient(circle at 12% 80%,rgba(161,125,97,.13),transparent 30%),
+    var(--paper);
+}
+.hero:before{
+  content:"";position:absolute;width:700px;height:700px;border:1px solid rgba(161,125,97,.22);
+  border-radius:50%;left:-300px;bottom:-360px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:60px;
+  padding-top:95px;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid var(--line);
+  border-radius:999px;background:rgba(255,255,255,.62);font-size:13px;font-weight:700;
+  box-shadow:0 10px 30px rgba(50,30,15,.04)
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#9c704d;box-shadow:0 0 0 6px rgba(156,112,77,.12)}
+.hero h1{font-size:clamp(44px,6.5vw,84px);line-height:1.08;margin:24px 0 18px;font-weight:900;letter-spacing:-2px}
+.hero h1 span{color:#9a765b}
+.hero p{font-size:clamp(17px,2vw,21px);line-height:2;color:#695748;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:15px;
+  font-weight:800;font-size:14px;transition:.3s;border:1px solid var(--line)
+}
+.btn.primary{background:var(--ink);color:white;box-shadow:0 14px 30px rgba(33,23,15,.18)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(33,23,15,.25)}
+.btn.light{background:white}
+.btn.light:hover{transform:translateY(-3px);border-color:var(--sand2)}
+.hero-logo{
+  position:relative;display:flex;justify-content:center;align-items:center;
+  min-height:540px;
+}
+.hero-logo .ring{
+  position:absolute;width:min(520px,90%);aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(128,96,72,.26);animation:spin 24s linear infinite;
+}
+.hero-logo .ring:after{
+  content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#9c7659;
+  top:18px;right:18%;
+}
+.hero-logo img{
+  width:min(500px,90%);position:relative;z-index:2;filter:drop-shadow(0 28px 25px rgba(65,40,20,.16));
+  animation:float 5s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translateY(-12px) rotate(.5deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ticker{background:var(--ink);color:#fff;overflow:hidden}
+.ticker-track{display:flex;gap:55px;white-space:nowrap;padding:14px 0;font-size:13px;font-weight:700;animation:ticker 28s linear infinite}
+@keyframes ticker{to{transform:translateX(50%)}}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}
+.eyebrow{font-size:12px;color:#9a765b;font-weight:900;letter-spacing:1.5px}
+.section-head h2{font-size:clamp(30px,4vw,50px);line-height:1.2;margin-top:8px}
+.section-head p{max-width:470px;color:#776556;line-height:1.9;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;min-height:240px;overflow:hidden;box-shadow:0 8px 30px rgba(45,30,20,.05);
+  transition:.45s cubic-bezier(.2,.8,.2,1)
+}
+.card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(205,181,158,.20);left:-75px;top:-80px;transition:.45s}
+.card:hover{transform:translateY(-9px);box-shadow:var(--shadow)}
+.card:hover:before{transform:scale(1.4)}
+.icon{
+  width:52px;height:52px;border-radius:16px;background:var(--cream);display:grid;place-items:center;
+  font-size:22px;margin-bottom:22px;position:relative
+}
+.card h3{font-size:21px;margin-bottom:8px;position:relative}
+.card p{color:#776556;line-height:1.9;font-size:14px;position:relative}
+.num{position:absolute;left:22px;bottom:16px;color:#d4c2b1;font-size:48px;font-weight:900;line-height:1}
+.spotlight{
+  background:linear-gradient(135deg,#21170f,#493326);color:white;position:relative;overflow:hidden
+}
+.spotlight:before{
+  content:"";position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(255,255,255,.1);
+  top:-310px;right:-160px
+}
+.spotgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
+.feature{
+  min-height:430px;border-radius:32px;padding:38px;display:flex;flex-direction:column;justify-content:end;
+  background:
+    linear-gradient(0deg,rgba(20,12,7,.92),rgba(20,12,7,.08)),
+    radial-gradient(circle at 70% 25%,#a8876e,#4c392c 55%,#201711);
+  position:relative;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.22)
+}
+.feature:after{
+  content:"إبراء";position:absolute;top:30px;left:35px;font-size:120px;font-weight:900;
+  color:rgba(255,255,255,.055);line-height:1
+}
+.feature .tag,.mini .tag{font-size:11px;font-weight:900;color:#e4cfbb;letter-spacing:1px}
+.feature h3{font-size:clamp(30px,4vw,48px);line-height:1.25;margin:10px 0}
+.feature p{color:#ddd0c4;line-height:1.9;max-width:650px}
+.side{display:grid;gap:18px}
+.mini{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:25px;padding:26px;transition:.35s}
+.mini:hover{background:rgba(255,255,255,.11);transform:translateX(-5px)}
+.mini h3{font-size:20px;margin:9px 0}
+.mini p{color:#d5c6b8;line-height:1.8;font-size:13px}
+.places{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.place{
+  display:block;padding:24px 18px;background:#fff;border:1px solid var(--line);border-radius:22px;
+  transition:.35s;cursor:pointer;position:relative;overflow:hidden
+}
+.place:hover{transform:translateY(-6px);border-color:#c5ab94;box-shadow:0 18px 35px rgba(45,30,20,.09)}
+.place b{display:flex;justify-content:space-between;align-items:center;font-size:16px;margin-bottom:6px}
+.place b i{font-style:normal;color:#9a765b;font-size:18px;transition:.25s}
+.place:hover b i{transform:translate(-3px,-3px)}
+.place span{display:block;font-size:12px;color:#8a7462;line-height:1.7}
+.place small{display:inline-block;margin-top:12px;padding:5px 9px;border-radius:999px;background:var(--cream);color:#806650;font-size:10px;font-weight:800}
+.contact{
+  padding:65px 0;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+}
+.contactbox{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.contact h2{font-size:clamp(28px,4vw,46px);margin:8px 0}
+.contact p{color:#756050}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.social{
+  width:48px;height:48px;border-radius:15px;background:#fff;border:1px solid var(--line);
+  display:grid;place-items:center;font-weight:900;transition:.3s
+}
+.social:hover{transform:translateY(-4px);background:var(--ink);color:#fff}
+
+.guide-section{padding:70px 0 85px;background:linear-gradient(180deg,#f8f4ee 0%,#eee5da 100%)}
+.guide-box{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:38px 42px;border:1px solid rgba(58,39,26,.12);border-radius:28px;background:rgba(255,255,255,.72);box-shadow:0 20px 60px rgba(48,31,18,.08)}
+.guide-box h2{font-size:clamp(28px,4vw,44px);margin:7px 0 10px}
+.guide-box p{color:#756050;line-height:1.9;max-width:650px;margin:0}
+.guide-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:14px;background:#3a271a;color:#fff;font-weight:800;text-decoration:none;white-space:nowrap;box-shadow:0 12px 30px rgba(58,39,26,.18);transition:.25s}
+.guide-btn:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(58,39,26,.25)}
+@media(max-width:700px){.guide-box{padding:28px 22px;flex-direction:column;align-items:stretch}.guide-btn{width:100%}}
+
+footer{background:#18110c;color:#cfc1b4;padding:50px 0 25px}
+.footergrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px}
+.footerbrand img{width:190px;filter:brightness(0) invert(1);opacity:.92}
+.footerbrand p{font-size:13px;line-height:2;color:#a99a8d;margin-top:12px;max-width:420px}
+footer h4{color:#fff;margin-bottom:16px}
+footer a{display:block;font-size:13px;color:#a99a8d;margin:9px 0;transition:.2s}
+footer a:hover{color:#fff}
+.copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:35px;padding-top:18px;font-size:11px;color:#81746a;display:flex;justify-content:space-between;gap:15px}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+
+
+.visuals{background:#eee7df}
+.visual-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-auto-rows:230px;gap:14px}
+.visual{position:relative;overflow:hidden;border-radius:26px;background:#d7c6b5;display:block}
+.visual.v-large{grid-row:span 2}
+.visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .5s}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(25,15,9,.75),transparent 55%);pointer-events:none}
+.visual:hover img{transform:scale(1.07);filter:saturate(1.05)}
+.visual span{position:absolute;z-index:2;right:18px;left:18px;bottom:15px;color:#fff;font-weight:900;font-size:14px;display:flex;justify-content:space-between;gap:10px}
+.visual span b{font-size:16px}
+
+.filterbar{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 28px}
+.filter{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:999px;cursor:pointer;font-weight:800;font-size:12px;transition:.25s}
+.filter b{font-size:10px;color:#9a765b;margin-right:4px}
+.filter:hover,.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.directory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.directory-image{height:145px;margin:-23px -23px 18px;overflow:hidden;background:#e9ded2}
+.directory-image{position:relative;overflow:hidden;background:linear-gradient(135deg,#f5efe7,#d8c5b2)}
+.directory-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s}
+.directory-card:hover .directory-image img{transform:scale(1.05)}
+
+.directory-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:23px;min-height:275px;display:flex;flex-direction:column;transition:.4s}
+.directory-card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#c5ab94}
+.directory-card.hidden{display:none}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.cat{display:inline-flex;padding:6px 10px;border-radius:999px;background:var(--cream);color:#806650;font-size:10px;font-weight:900}
+.index{font-size:13px;font-weight:900;color:#d2c0ae}
+.directory-card h3{font-size:18px;line-height:1.55;margin-bottom:9px}
+.directory-card p{font-size:13px;color:#796657;line-height:1.85;flex:1}
+.card-actions{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.map-btn{display:flex;justify-content:center;align-items:center;padding:10px 12px;border-radius:13px;background:var(--ink);color:#fff;font-size:11px;font-weight:900;transition:.25s}
+.map-btn:hover{background:#4a3424;transform:translateY(-2px)}
+.phone{font-size:11px;color:#806b59;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;text-align:center}
+.stat strong{display:block;font-size:38px;color:#9a765b;line-height:1.2}
+.stat span{display:block;margin-top:8px;color:#786455;font-size:13px}
+
+@media(max-width:900px){
+  .visual-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .visual.v-large{grid-row:span 2}
+}
+@media(max-width:580px){
+  .visual-grid{grid-template-columns:1fr;grid-auto-rows:230px}
+  .visual.v-large{grid-row:span 1}
+}
+
+@media(max-width:900px){
+  .links{display:none}.menu{display:block}
+  .hero-grid,.spotgrid{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-bottom:70px}.hero-grid{padding-top:120px}
+  .hero-logo{min-height:420px;order:-1}
+  .cards{grid-template-columns:1fr 1fr}.places{grid-template-columns:1fr 1fr}
+  .contactbox{align-items:flex-start;flex-direction:column}
+  .footergrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){
+  .container{width:min(100% - 28px,1180px)}
+  section{padding:75px 0}.hero h1{letter-spacing:-1px}
+  .hero-logo{min-height:330px}.hero-logo .ring{width:320px}.hero-logo img{width:330px}
+  .cards,.places,.footergrid{grid-template-columns:1fr}
+  .section-head{display:block}.section-head p{margin-top:14px}
+  .feature{min-height:390px;padding:28px}
+  .brand img{width:45px;height:45px}.brand{font-size:13px}.brand small{font-size:8px}
+  .copyright{display:block}.copyright span{display:block;margin-top:7px}
+}
+.image-fallback{display:none!important}
 </style>
 </head>
 <body>
+<div class="topline"></div>
 
 <header id="header">
   <div class="container nav">
     <a class="brand" href="#home">
       <img src="huna-ibra-logo-transparent.png" alt="هنا إبراء">
-      <div>
-        <span>هنا إبراء</span>
-        <small>HUNA IBRA MEDIA NETWORK</small>
-      </div>
+      <span>هنا إبراء<small>HUNA IBRA MEDIA NETWORK</small></span>
     </a>
-    <nav class="links" id="navLinks">
+    <nav class="links">
       <a href="#home">الرئيسية</a>
       <a href="#coverage">تغطياتنا</a>
       <a href="#heritage">التراث</a>
       <a href="#ibra">إبراء</a>
       <a href="#contact">تواصل معنا</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+    <button class="menu" aria-label="القائمة">☰</button>
   </div>
 </header>
 
 <main>
 <section class="hero" id="home">
   <div class="container hero-grid">
-    <div>
+    <div class="reveal">
       <div class="kicker"><span class="dot"></span> شبكة إعلامية من قلب ولاية إبراء</div>
       <h1>نرصد الخبر،<br><span>نغطي الحدث،</span><br>ونوثّق التراث.</h1>
       <p>هنا إبراء — مساحة إعلامية تُقرّب الصورة، تحكي قصص المكان وأهله، وتوثّق جمال ولاية إبراء بعيون محلية.</p>
@@ -623,53 +306,52 @@ footer a {
         <a class="btn light" href="https://api.whatsapp.com/send?phone=96895805059" target="_blank" rel="noopener">تواصل معنا</a>
       </div>
     </div>
-    <div class="hero-logo">
+    <div class="hero-logo reveal">
+      <div class="ring"></div>
       <img src="huna-ibra-logo-transparent.png" alt="شعار شبكة هنا إبراء">
     </div>
   </div>
 </section>
 
-<div class="ticker">
-  <div class="ticker-track">
-    🇴🇲 هنا إبراء • فعاليات • قصص • توثيق بصري • تراث إبراء • أخبار المجتمع • ولاية إبراء
-  </div>
-</div>
+<div class="ticker"><div class="ticker-track">
+  <span>🇴🇲 هنا إبراء</span><span>•</span><span>فعاليات</span><span>•</span><span>قصص</span><span>•</span><span>توثيق بصري</span><span>•</span><span>تراث إبراء</span><span>•</span><span>أخبار المجتمع</span><span>•</span><span>🇴🇲 هنا إبراء</span>
+</div></div>
+
 
 <section class="visuals" id="visuals">
   <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">IBRA VISUAL ARCHIVE</div>
-      <h2>إبراء بعدسة المكان.</h2>
-      <p>معالم ومشاهد من إبراء توثق حيوية وجمال الولاية.</p>
+    <div class="section-head reveal">
+      <div><div class="eyebrow">IBRA VISUAL ARCHIVE</div><h2>إبراء بعدسة المكان.</h2></div>
+      <p>صور مختارة من نتائج البحث على الويب لمعالم ومشاهد من إبراء، لتكون الواجهة البصرية للموقع أكثر واقعية وحيوية.</p>
     </div>
     <div class="visual-grid">
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=قرية+المنزفة+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/atheer/VKMU7E2FURCPFMEXITGGHAYVBM.jpeg" alt="قرية المنزفة" loading="lazy">
-        <span>قرية المنزفة الأثرية 📍</span>
+      <a class="visual v-large reveal" href="https://www.google.com/maps/search/?api=1&query=قرية+المنزفة+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/atheer/VKMU7E2FURCPFMEXITGGHAYVBM.jpeg" alt="قرية المنزفة في إبراء" loading="lazy">
+        <span>قرية المنزفة الأثرية <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=مسجد+ذو+القبلتين+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://shabiba.eu-central-1.linodeobjects.com/2016/08/18/477302.jpg" alt="مسجد ذو القبلتين" loading="lazy">
-        <span>مسجد ذو القبلتين 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=مسجد+ذو+القبلتين+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://shabiba.eu-central-1.linodeobjects.com/2016/08/18/477302.jpg" alt="مسجد ذو القبلتين في إبراء" loading="lazy">
+        <span>مسجد ذو القبلتين <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=جامع+السلطان+قابوس+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://viewoman.com/storage/item/gallery/gallary-2024-04-09-6615319d72a23.jpg" alt="جامع السلطان قابوس" loading="lazy">
-        <span>جامع السلطان قابوس 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=جامع+السلطان+قابوس+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://viewoman.com/storage/item/gallery/gallary-2024-04-09-6615319d72a23.jpg" alt="جامع السلطان قابوس في إبراء" loading="lazy">
+        <span>جامع السلطان قابوس <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=بيت+اليحمدي+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://plus968.com/public/img/museums_in_oman/Bait-al-yahmadi-castle-.jpg" alt="بيت اليحمدي" loading="lazy">
-        <span>بيت اليحمدي 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=بيت+اليحمدي+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://plus968.com/public/img/museums_in_oman/Bait-al-yahmadi-castle-.jpg" alt="بيت اليحمدي في إبراء" loading="lazy">
+        <span>بيت اليحمدي <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=بيت+الدروازة+المنزفة+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://image-worker.mindtrip.ai/image-resize/format%3Dwebp%2Cw%3D720/https%3A/images.mindtrip.ai/attractions/1380/4685/dc46/94b5/e660/0451/6f5c/902b" alt="بيت الدروازة" loading="lazy">
-        <span>بيت الدروازة 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=بيت+الدروازة+المنزفة+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://image-worker.mindtrip.ai/image-resize/format%3Dwebp%2Cw%3D720/https%3A/images.mindtrip.ai/attractions/1380/4685/dc46/94b5/e660/0451/6f5c/902b" alt="بيت الدروازة في إبراء" loading="lazy">
+        <span>بيت الدروازة <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=سوق+الأربعاء+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://petitfute.twic.pics/medias/photo/originale/2c/f3/117921-ibra-souk-d-ibra.jpg?pf=v2&twic=v1%2Fcover%3D900x506%2Fmax%3D1200" alt="سوق الأربعاء" loading="lazy">
-        <span>سوق الأربعاء 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=سوق+الأربعاء+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://petitfute.twic.pics/medias/photo/originale/2c/f3/117921-ibra-souk-d-ibra.jpg?pf=v2&twic=v1%2Fcover%3D900x506%2Fmax%3D1200" alt="سوق الأربعاء في إبراء" loading="lazy">
+        <span>سوق الأربعاء <b>📍</b></span>
       </a>
-      <a class="visual" href="https://www.google.com/maps/search/?api=1&query=وادي+قفيفة+إبراء+عمان" target="_blank" rel="noopener">
-        <img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="وادي قفيفة" loading="lazy">
-        <span>وادي قفيفة 📍</span>
+      <a class="visual reveal" href="https://www.google.com/maps/search/?api=1&query=وادي+قفيفة+إبراء+عمان" target="_blank" rel="noopener">
+        <img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="وادي قفيفة وإبراء" loading="lazy">
+        <span>وادي قفيفة <b>📍</b></span>
       </a>
     </div>
   </div>
@@ -677,14 +359,12 @@ footer a {
 
 <section id="coverage">
   <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">HUNA IBRA DIRECTORY</div>
-      <h2>دليل إبراء التفاعلي (28 موقعاً).</h2>
-      <p>تصفح كل المواقع والخدمات السياحية في ولاية إبراء بسهولة.</p>
+    <div class="section-head reveal">
+      <div><div class="eyebrow">HUNA IBRA DIRECTORY</div><h2>دليل إبراء كامل.</h2></div>
+      <p>تم تحويل محتوى دليل المواقع السياحية المرفق إلى دليل رقمي داخل الموقع، مع تصنيفات واضحة وزر مباشر لفتح كل موقع في Google Maps.</p>
     </div>
-    
     <div class="filterbar">
-      <button class="filter active" data-filter="all">الكل (28)</button>
+      <button class="filter active" data-filter="all">الكل <b>28</b></button>
       <button class="filter" data-filter="معالم دينية وتاريخية">تراث ومعالم</button>
       <button class="filter" data-filter="طبيعة">طبيعة</button>
       <button class="filter" data-filter="ترفيه">ترفيه</button>
@@ -693,345 +373,312 @@ footer a {
       <button class="filter" data-filter="سياحة">سياحة</button>
       <button class="filter" data-filter="فنادق وإقامة">فنادق وإقامة</button>
     </div>
-
     <div class="directory-grid">
-      <!-- 1 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">01</span></div>
-        <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2016/08/18/477302.jpg" alt="مسجد العقبة" loading="lazy"></div>
-        <h3>مسجد العقبة «ذو القبلتين»</h3>
-        <p>من أشهر معالم إبراء وأقدم مبانيها، واتخذته الولاية شعارًا لها.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مسجد+العقبة+ذو+القبلتين+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
+      <article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">01</span></div>
+      <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2016/08/18/477302.jpg" alt="مسجد العقبة" loading="lazy"></div><h3>مسجد العقبة «ذو القبلتين»</h3>
+      <p>من أشهر معالم إبراء وأقدم مبانيها، واتخذته الولاية شعارًا لها.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مسجد+العقبة+ذو+القبلتين+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="طبيعة">
+      <div class="card-top"><span class="cat">طبيعة</span><span class="index">02</span></div>
+      <div class="directory-image"><img src="safari-world.png" alt="عالم سفاري" loading="lazy"></div><h3>عالم سفاري</h3>
+      <p>حديقة حيوانات وواجهة سياحية تضم مجموعة من الحيوانات والطيور النادرة.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=عالم+سفاري+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 9799 9271</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="طبيعة">
+      <div class="card-top"><span class="cat">طبيعة</span><span class="index">03</span></div>
+      <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="وادي قفيفة" loading="lazy"></div><h3>وادي قفيفة</h3>
+      <p>مزار طبيعي يتميز بالمياه والهدوء وأصوات الطيور، ويضم سدًا من سدود التغذية الجوفية.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=وادي+قفيفة+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="طبيعة">
+      <div class="card-top"><span class="cat">طبيعة</span><span class="index">04</span></div>
+      <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="سد وادي وريد" loading="lazy"></div><h3>سد وادي وريد</h3>
+      <p>سد سياحي بين جبال وريد، ويحتاج الوصول إليه إلى سيارة دفع رباعي.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=سد+وادي+وريد+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="ترفيه">
+      <div class="card-top"><span class="cat">ترفيه</span><span class="index">05</span></div>
+      <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="حديقة إبراء العامة" loading="lazy"></div><h3>حديقة إبراء العامة</h3>
+      <p>تقع في قرية اليحمدي وتضم مساحات خضراء وأشجارًا وزهورًا وألعابًا للأطفال.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=حديقة+إبراء+العامة+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">06</span></div>
+      <div class="directory-image"><img src="https://plus968.com/public/img/museums_in_oman/Bait-al-yahmadi-castle-.jpg" alt="بيت اليحمدي" loading="lazy"></div><h3>بيت اليحمدي</h3>
+      <p>حصن تاريخي في إبراء، ارتبط بالحماية والأغراض الحربية ويقع بجوار البساتين والنخيل.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+اليحمدي+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">07</span></div>
+      <div class="directory-image"><img src="hasn-alshibak.png" alt="حصن الشباك" loading="lazy"></div><h3>حصن الشباك</h3>
+      <p>من أهم المعالم الأثرية في عالية إبراء، وبُني في القرن الثاني عشر الهجري.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=حصن+الشباك+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">08</span></div>
+      <div class="directory-image"><img src="https://viewoman.com/storage/item/gallery/gallary-2024-04-09-6615319d72a23.jpg" alt="جامع السلطان قابوس بإبراء" loading="lazy"></div><h3>جامع السلطان قابوس بإبراء</h3>
+      <p>معلم حضاري وديني يتوسط الولاية، ويتميز بزخارفه الإسلامية والآيات القرآنية.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=جامع+السلطان+قابوس+بإبراء+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">09</span></div>
+      <div class="directory-image"><img src="https://cloudfront-eu-central-1.images.arcpublishing.com/atheer/VKMU7E2FURCPFMEXITGGHAYVBM.jpeg" alt="قرية المنزفة الأثرية" loading="lazy"></div><h3>قرية المنزفة الأثرية</h3>
+      <p>قرية تاريخية مهمة تضم مباني هندسية جميلة وطابعًا عمانيًا وعربيًا مميزًا.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=قرية+المنزفة+الأثرية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="معالم دينية وتاريخية">
+      <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">10</span></div>
+      <h3>جامع القناطر الأثري</h3>
+      <p>رمز تاريخي وثقافي في السفالة، يعود تاريخ بنائه إلى عام 1077هـ / 1666م.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=جامع+القناطر+الأثري+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="تراث وثقافة">
+      <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">11</span></div>
+      <div class="directory-image"><img src="https://image-worker.mindtrip.ai/image-resize/format%3Dwebp%2Cw%3D720/https%3A/images.mindtrip.ai/attractions/1380/4685/dc46/94b5/e660/0451/6f5c/902b" alt="بيت الدروازة" loading="lazy"></div><h3>بيت الدروازة</h3>
+      <p>بيت أثري في المنزفة تحول إلى متحف تراثي يضم مقتنيات وصالات عرض ومقهى.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+الدروازة+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 9953 4098</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="أسواق وثقافة">
+      <div class="card-top"><span class="cat">أسواق وثقافة</span><span class="index">12</span></div>
+      <div class="directory-image"><img src="https://petitfute.twic.pics/medias/photo/originale/2c/f3/117921-ibra-souk-d-ibra.jpg?pf=v2&twic=v1%2Fcover%3D900x506%2Fmax%3D1200" alt="سوق الأربعاء" loading="lazy"></div><h3>سوق الأربعاء</h3>
+      <p>سوق أسبوعي في إبراء يقام صباح كل أربعاء ويتميز بكونه سوقًا للنساء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=سوق+الأربعاء+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="تراث وثقافة">
+      <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">13</span></div>
+      <h3>مكتبة السباخ العامة</h3>
+      <p>مكتبة تاريخية في قرية السباخ مرت بمراحل طويلة من التطوير ونشر العلم والمعرفة.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مكتبة+السباخ+العامة+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 9218 1004</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="تراث وثقافة">
+      <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">14</span></div>
+      <h3>مركز إبراء الثقافي</h3>
+      <p>صرح ثقافي ومعرفي تأسس عام 2014 ويضم كتبًا ووثائق ومخطوطات ومقتنيات.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مركز+إبراء+الثقافي+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="ترفيه">
+      <div class="card-top"><span class="cat">ترفيه</span><span class="index">15</span></div>
+      <h3>صالة الخيال للألعاب</h3>
+      <p>صالة ألعاب وترفيه ضمن دليل المراكز والأماكن الترفيهية في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=صالة+الخيال+للألعاب+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="ترفيه">
+      <div class="card-top"><span class="cat">ترفيه</span><span class="index">16</span></div>
+      <h3>قرية المرح</h3>
+      <p>مرفق ترفيهي في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=قرية+المرح+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 9224 3222</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="ترفيه">
+      <div class="card-top"><span class="cat">ترفيه</span><span class="index">17</span></div>
+      <h3>مركز رواد المجد للبولينج وألعاب التسلية</h3>
+      <p>مركز للبولينج وألعاب التسلية ضمن المرافق الترفيهية في الولاية.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مركز+رواد+المجد+للبولينج+وألعاب+التسلية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 9698 9021</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="سياحة">
+      <div class="card-top"><span class="cat">سياحة</span><span class="index">18</span></div>
+      <h3>بيرحاء إبراء للسياحة</h3>
+      <p>جهة سياحية محلية ضمن دليل الخدمات والأنشطة السياحية في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيرحاء+إبراء+للسياحة+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 7229 9551</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">19</span></div>
+      <h3>فندق رمال الشرقية | AL SHARQIYA SANDS HOTEL</h3>
+      <p>خيار إقامة مدرج ضمن دليل فنادق إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+رمال+الشرقية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 98193676</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">20</span></div>
+      <h3>فندق الأضواء الذهبية | GOLDEN LIGHTS HOTEL</h3>
+      <p>خيار إقامة مدرج ضمن دليل فنادق إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+الأضواء+الذهبية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 98193676</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">21</span></div>
+      <h3>فندق إبراء بلازا | IBRA PLAZA HOTEL</h3>
+      <p>فندق مدرج ضمن دليل الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+إبراء+بلازا+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 99005745</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">22</span></div>
+      <h3>فندق طيف | TAIF HOTEL</h3>
+      <p>فندق مدرج ضمن دليل الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+طيف+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 98110202</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">23</span></div>
+      <h3>فندق إبراء | IBRA HOTEL</h3>
+      <p>فندق مدرج ضمن دليل الإقامة في الولاية.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+إبراء+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 99340609</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">24</span></div>
+      <h3>إستراحة إبراء السياحية | IBRA TOURIST BREAK</h3>
+      <p>استراحة سياحية مدرجة ضمن دليل أماكن الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=إستراحة+إبراء+السياحية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 25571777 / +968 99118875</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">25</span></div>
+      <h3>المستقبل للشقق الفندقية | AL MUSTAQBAL HOTEL APARTMENTS</h3>
+      <p>شقق فندقية مدرجة ضمن دليل الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=المستقبل+للشقق+الفندقية+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 71999964</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">26</span></div>
+      <h3>الموقع الأخضر للنزل الخضراء | SAFARINN IBRA</h3>
+      <p>نزل أخضر مدرج ضمن دليل أماكن الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=الموقع+الأخضر+للنزل+الخضراء+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 90112100</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">27</span></div>
+      <h3>المرجان للنزل الخضراء | ALMARJAN FOR GREEN LODGES</h3>
+      <p>نزل أخضر مدرج ضمن دليل الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=المرجان+للنزل+الخضراء+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 94282444</span>
+      </div>
+    </article>
+<article class="directory-card reveal" data-cat="فنادق وإقامة">
+      <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">28</span></div>
+      <h3>بيت ضيافة أفضل | GUESTHOUSE AFADAL</h3>
+      <p>بيت ضيافة مدرج ضمن دليل أماكن الإقامة في إبراء.</p>
+      <div class="card-actions">
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+ضيافة+أفضل+إبراء+عمان" target="_blank" rel="noopener">📍 افتح الموقع في Google Maps ↗</a>
+        <span class="phone">📞 +968 99802880</span>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
 
-      <!-- 2 -->
-      <article class="directory-card" data-cat="طبيعة">
-        <div class="card-top"><span class="cat">طبيعة</span><span class="index">02</span></div>
-        <div class="directory-image"><img src="safari-world.png" alt="عالم سفاري" loading="lazy"></div>
-        <h3>عالم سفاري</h3>
-        <p>حديقة حيوانات وواجهة سياحية تضم مجموعة من الحيوانات والطيور النادرة.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=عالم+سفاري+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9799 9271</span>
-        </div>
+<section class="spotlight" id="heritage">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">IBRA HERITAGE</div><h2>تراث المكان.</h2></div>
+      <p style="color:#cdbeb0">من مسجد العقبة والمنزفة إلى الحصون والجوامع والبيوت التراثية، يجمع «هنا إبراء» أهم ما ورد في الدليل في تجربة واحدة.</p>
+    </div>
+    <div class="spotgrid">
+      <article class="feature reveal">
+        <span class="tag">أبرز معالم الولاية</span>
+        <h3>إبراء… ذاكرة تُروى.</h3>
+        <p>اكتشف المعالم التاريخية والدينية والتراثية والطبيعية، ثم انتقل مباشرة إلى الموقع عبر Google Maps.</p>
       </article>
-
-      <!-- 3 -->
-      <article class="directory-card" data-cat="طبيعة">
-        <div class="card-top"><span class="cat">طبيعة</span><span class="index">03</span></div>
-        <div class="directory-image"><img src="https://shabiba.eu-central-1.linodeobjects.com/2025/07/1752316036-1752316035-d8guins9kisz-700x400.jpg" alt="وادي قفيفة" loading="lazy"></div>
-        <h3>وادي قفيفة</h3>
-        <p>مزار طبيعي يتميز بالمياه والهدوء وأصوات الطيور، ويضم سدًا للتغذية الجوفية.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=وادي+قفيفة+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 4 -->
-      <article class="directory-card" data-cat="طبيعة">
-        <div class="card-top"><span class="cat">طبيعة</span><span class="index">04</span></div>
-        <h3>سد وادي وريد</h3>
-        <p>سد سياحي يقع بين جبال وريد، ويحتاج الوصول إليه لسيارة دفع رباعي.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=سد+وادي+وريد+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 5 -->
-      <article class="directory-card" data-cat="ترفيه">
-        <div class="card-top"><span class="cat">ترفيه</span><span class="index">05</span></div>
-        <h3>حديقة إبراء العامة</h3>
-        <p>تقع في قرية اليحمدي وتضم مساحات خضراء وأشجارًا وزهورًا وألعابًا للأطفال.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=حديقة+إبراء+العامة+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 6 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">06</span></div>
-        <div class="directory-image"><img src="https://plus968.com/public/img/museums_in_oman/Bait-al-yahmadi-castle-.jpg" alt="بيت اليحمدي" loading="lazy"></div>
-        <h3>بيت اليحمدي</h3>
-        <p>حصن تاريخي في إبراء ارتبط بالحماية والأغراض الحربية ويقع بجوار البساتين والنخيل.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+اليحمدي+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 7 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">07</span></div>
-        <div class="directory-image"><img src="hasn-alshibak.png" alt="حصن الشباك" loading="lazy"></div>
-        <h3>حصن الشباك</h3>
-        <p>من أهم المعالم الأثرية في عالية إبراء، وبُني في القرن الثاني عشر الهجري.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=حصن+الشباك+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 8 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">08</span></div>
-        <div class="directory-image"><img src="https://viewoman.com/storage/item/gallery/gallary-2024-04-09-6615319d72a23.jpg" alt="جامع السلطان قابوس" loading="lazy"></div>
-        <h3>جامع السلطان قابوس بإبراء</h3>
-        <p>معلم حضاري وديني يتوسط الولاية، ويتميز بزخارفه الإسلامية والآيات القرآنية.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=جامع+السلطان+قابوس+بإبراء+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 9 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">09</span></div>
-        <div class="directory-image"><img src="https://cloudfront-eu-central-1.images.arcpublishing.com/atheer/VKMU7E2FURCPFMEXITGGHAYVBM.jpeg" alt="قرية المنزفة" loading="lazy"></div>
-        <h3>قرية المنزفة الأثرية</h3>
-        <p>قرية تاريخية مهمة تضم مباني هندسية ذات طابع عماني وعربي عريق.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=قرية+المنزفة+الأثرية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 10 -->
-      <article class="directory-card" data-cat="معالم دينية وتاريخية">
-        <div class="card-top"><span class="cat">معالم دينية وتاريخية</span><span class="index">10</span></div>
-        <h3>جامع القناطر الأثري</h3>
-        <p>رمز تاريخي وثقافي في السفالة، يعود تاريخ بنائه إلى عام 1077هـ / 1666م.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=جامع+القناطر+الأثري+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 11 -->
-      <article class="directory-card" data-cat="تراث وثقافة">
-        <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">11</span></div>
-        <div class="directory-image"><img src="https://image-worker.mindtrip.ai/image-resize/format%3Dwebp%2Cw%3D720/https%3A/images.mindtrip.ai/attractions/1380/4685/dc46/94b5/e660/0451/6f5c/902b" alt="بيت الدروازة" loading="lazy"></div>
-        <h3>بيت الدروازة</h3>
-        <p>بيت أثري تحول إلى متحف تراثي يضم مقتنيات وصالات عرض ومقهى.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+الدروازة+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9953 4098</span>
-        </div>
-      </article>
-
-      <!-- 12 -->
-      <article class="directory-card" data-cat="أسواق وثقافة">
-        <div class="card-top"><span class="cat">أسواق وثقافة</span><span class="index">12</span></div>
-        <div class="directory-image"><img src="https://petitfute.twic.pics/medias/photo/originale/2c/f3/117921-ibra-souk-d-ibra.jpg?pf=v2&twic=v1%2Fcover%3D900x506%2Fmax%3D1200" alt="سوق الأربعاء" loading="lazy"></div>
-        <h3>سوق الأربعاء</h3>
-        <p>سوق أسبوعي يقام صباح كل أربعاء مخصص للنساء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=سوق+الأربعاء+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 13 -->
-      <article class="directory-card" data-cat="تراث وثقافة">
-        <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">13</span></div>
-        <h3>مكتبة السباخ العامة</h3>
-        <p>مكتبة تاريخية في قرية السباخ مرت بمراحل طويلة من التطوير ونشر العلم والمعرفة.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مكتبة+السباخ+العامة+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9218 1004</span>
-        </div>
-      </article>
-
-      <!-- 14 -->
-      <article class="directory-card" data-cat="تراث وثقافة">
-        <div class="card-top"><span class="cat">تراث وثقافة</span><span class="index">14</span></div>
-        <h3>مركز إبراء الثقافي</h3>
-        <p>صرح ثقافي ومعرفي تأسس عام 2014 ويضم كتبًا ووثائق ومخطوطات ومقتنيات.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مركز+إبراء+الثقافي+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 15 -->
-      <article class="directory-card" data-cat="ترفيه">
-        <div class="card-top"><span class="cat">ترفيه</span><span class="index">15</span></div>
-        <h3>صالة الخيال للألعاب</h3>
-        <p>صالة ألعاب وترفيه ضمن دليل المراكز والأماكن الترفيهية في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=صالة+الخيال+للألعاب+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-        </div>
-      </article>
-
-      <!-- 16 -->
-      <article class="directory-card" data-cat="ترفيه">
-        <div class="card-top"><span class="cat">ترفيه</span><span class="index">16</span></div>
-        <h3>قرية المرح</h3>
-        <p>مرفق ترفيهي مخصص للأطفال والعائلات في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=قرية+المرح+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9224 3222</span>
-        </div>
-      </article>
-
-      <!-- 17 -->
-      <article class="directory-card" data-cat="ترفيه">
-        <div class="card-top"><span class="cat">ترفيه</span><span class="index">17</span></div>
-        <h3>مركز رواد المجد للبولينج وألعاب التسلية</h3>
-        <p>مركز للبولينج وألعاب التسلية ضمن المرافق الترفيهية في الولاية.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=مركز+رواد+المجد+للبولينج+وألعاب+التسلية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9698 9021</span>
-        </div>
-      </article>
-
-      <!-- 18 -->
-      <article class="directory-card" data-cat="سياحة">
-        <div class="card-top"><span class="cat">سياحة</span><span class="index">18</span></div>
-        <h3>بيرحاء إبراء للسياحة</h3>
-        <p>جهة سياحية محلية ضمن دليل الخدمات والأنشطة السياحية في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيرحاء+إبراء+للسياحة+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 7229 9551</span>
-        </div>
-      </article>
-
-      <!-- 19 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">19</span></div>
-        <h3>فندق رمال الشرقية | AL SHARQIYA SANDS HOTEL</h3>
-        <p>خيار إقامة مدرج ضمن دليل فنادق إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+رمال+الشرقية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9819 3676</span>
-        </div>
-      </article>
-
-      <!-- 20 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">20</span></div>
-        <h3>فندق الأضواء الذهبية | GOLDEN LIGHTS HOTEL</h3>
-        <p>خيار إقامة مدرج ضمن دليل فنادق إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+الأضواء+الذهبية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9819 3676</span>
-        </div>
-      </article>
-
-      <!-- 21 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">21</span></div>
-        <h3>فندق إبراء بلازا | IBRA PLAZA HOTEL</h3>
-        <p>فندق مدرج ضمن دليل الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+إبراء+بلازا+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9900 5745</span>
-        </div>
-      </article>
-
-      <!-- 22 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">22</span></div>
-        <h3>فندق طيف | TAIF HOTEL</h3>
-        <p>فندق مدرج ضمن دليل الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+طيف+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9811 0202</span>
-        </div>
-      </article>
-
-      <!-- 23 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">23</span></div>
-        <h3>فندق إبراء | IBRA HOTEL</h3>
-        <p>فندق مدرج ضمن دليل الإقامة في الولاية.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=فندق+إبراء+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9934 0609</span>
-        </div>
-      </article>
-
-      <!-- 24 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">24</span></div>
-        <h3>إستراحة إبراء السياحية | IBRA TOURIST BREAK</h3>
-        <p>استراحة سياحية مدرجة ضمن دليل أماكن الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=إستراحة+إبراء+السياحية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 2557 1777 / +968 9911 8875</span>
-        </div>
-      </article>
-
-      <!-- 25 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">25</span></div>
-        <h3>المستقبل للشقق الفندقية | AL MUSTAQBAL HOTEL APARTMENTS</h3>
-        <p>شقق فندقية مدرجة ضمن دليل الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=المستقبل+للشقق+الفندقية+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 7199 9964</span>
-        </div>
-      </article>
-
-      <!-- 26 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">26</span></div>
-        <h3>الموقع الأخضر للنزل الخضراء | SAFARINN IBRA</h3>
-        <p>نزل أخضر مدرج ضمن دليل أماكن الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=الموقع+الأخضر+للنزل+الخضراء+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9011 2100</span>
-        </div>
-      </article>
-
-      <!-- 27 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">27</span></div>
-        <h3>المرجان للنزل الخضراء | ALMARJAN FOR GREEN LODGES</h3>
-        <p>نزل أخضر مدرج ضمن دليل الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=المرجان+للنزل+الخضراء+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9428 2444</span>
-        </div>
-      </article>
-
-      <!-- 28 -->
-      <article class="directory-card" data-cat="فنادق وإقامة">
-        <div class="card-top"><span class="cat">فنادق وإقامة</span><span class="index">28</span></div>
-        <h3>بيت ضيافة أفضل | GUESTHOUSE AFADAL</h3>
-        <p>بيت ضيافة مدرج ضمن دليل أماكن الإقامة في إبراء.</p>
-        <div class="card-actions">
-          <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=بيت+ضيافة+أفضل+إبراء+عمان" target="_blank" rel="noopener">📍 Google Maps ↗</a>
-          <span class="phone">📞 +968 9980 2880</span>
-        </div>
-      </article>
+      <div class="side">
+        <article class="mini reveal"><span class="tag">تاريخ</span><h3>مسجد العقبة «ذو القبلتين»</h3><p>أحد أشهر الرموز التاريخية في الولاية واتخذته إبراء شعارًا لها.</p></article>
+        <article class="mini reveal"><span class="tag">تراث</span><h3>قرية المنزفة الأثرية</h3><p>من أبرز القرى التاريخية في إبراء بما تضمه من مبانٍ ذات طابع عماني مميز.</p></article>
+        <article class="mini reveal"><span class="tag">طبيعة</span><h3>وادي قفيفة وسد وادي وريد</h3><p>وجهتان طبيعيتان ضمن دليل المواقع السياحية في الولاية.</p></article>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="ibra">
   <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">ABOUT IBRA</div>
-      <h2>من قلب الولاية.</h2>
+    <div class="section-head reveal">
+      <div><div class="eyebrow">ABOUT IBRA</div><h2>من قلب الولاية.</h2></div>
+      <p>بحسب الدليل المرفق، تضم ولاية إبراء مناطق وقرى عدة، من أبرزها السفالة والعالية والثابتي واليحمدي والحايمة وقفيفة، وتبعد عن مسقط نحو 180 كم.</p>
     </div>
     <div class="stats">
-      <div class="stat"><strong>28</strong><span>موقعًا في الدليل</span></div>
-      <div class="stat"><strong>🇴🇲</strong><span>سلطنة عُمان</span></div>
-      <div class="stat"><strong>📍</strong><span>شمال الشرقية</span></div>
+      <div class="stat reveal"><strong>28</strong><span>موقعًا وخدمة في الدليل</span></div>
+      <div class="stat reveal"><strong>🇴🇲</strong><span>من قلب سلطنة عُمان</span></div>
+      <div class="stat reveal"><strong>📍</strong><span>ولاية إبراء · شمال الشرقية</span></div>
     </div>
   </div>
 </section>
-
 <section class="contact" id="contact">
-  <div class="container contactbox">
+  <div class="container contactbox reveal">
     <div>
       <div class="eyebrow">STAY CONNECTED</div>
-      <h2>تواصل مع شبكة هنا إبراء</h2>
-      <p>للتغطيات والاستفسارات الإعلامية</p>
+      <h2>هنا إبراء، وهنا تبدأ الحكاية.</h2>
+      <p>للتغطيات والاستفسارات والتواصل الإعلامي</p>
     </div>
     <div>
-      <div class="actions">
+      <div class="actions" style="margin-top:0">
         <a class="btn primary" href="https://api.whatsapp.com/send?phone=96895805059" target="_blank" rel="noopener">واتساب · 95805059</a>
       </div>
-      <div class="socials" style="margin-top:10px">
-        <a class="social" href="https://www.instagram.com/huna_ibra1/" target="_blank" rel="noopener">IG</a>
-        <a class="social" href="https://x.com/huna_ibra" target="_blank" rel="noopener">𝕏</a>
-        <a class="social" href="https://www.youtube.com/@huna_ibra/featured" target="_blank" rel="noopener">YT</a>
+      <div class="socials" style="margin-top:13px">
+        <a class="social" href="https://www.instagram.com/huna_ibra1/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a class="social" href="https://x.com/huna_ibra" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+        <a class="social" href="https://www.youtube.com/@huna_ibra/featured" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
       </div>
     </div>
   </div>
@@ -1040,13 +687,13 @@ footer a {
 
 <section class="guide-section" id="guide">
   <div class="container">
-    <div class="guide-box">
+    <div class="guide-box reveal">
       <div>
         <div class="eyebrow">IBRA TOURISM GUIDE</div>
-        <h2>دليل المواقع السياحية</h2>
-        <p>يمكنك الاطلاع على الملف الكامل في أي وقت.</p>
+        <h2>دليل المواقع السياحية بولاية إبراء</h2>
+        <p>افتح الدليل الكامل للاطلاع على المواقع السياحية والمعلومات الواردة في الدليل المرفق، ويمكنك العودة للموقع في أي وقت.</p>
       </div>
-      <a class="guide-btn" href="dalil-ibra.pdf" target="_blank" rel="noopener">📖 فتح الدليل PDF ↗</a>
+      <a class="guide-btn" href="dalil-ibra.pdf" target="_blank" rel="noopener">📖 فتح الدليل الكامل ↗</a>
     </div>
   </div>
 </section>
@@ -1056,52 +703,68 @@ footer a {
     <div class="footergrid">
       <div class="footerbrand">
         <img src="huna-ibra-logo-transparent.png" alt="هنا إبراء">
-        <p>شبكة إعلامية من قلب ولاية إبراء.</p>
+        <p>شبكة إعلامية من قلب ولاية إبراء. نرصد الخبر، نغطي الحدث، ونوثّق التراث.</p>
       </div>
       <div>
-        <h4>تابعنا</h4>
+        <h4>روابط</h4>
+        <a href="#home">الرئيسية</a><a href="#coverage">تغطياتنا</a><a href="#heritage">التراث</a><a href="#ibra">اكتشف إبراء</a><a href="#guide">الدليل السياحي</a>
+      </div>
+      <div>
+        <h4>تابع هنا إبراء</h4>
         <a href="https://www.instagram.com/huna_ibra1/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://x.com/huna_ibra" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://www.youtube.com/@huna_ibra/featured" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://api.whatsapp.com/send?phone=96895805059" target="_blank" rel="noopener">WhatsApp · 95805059</a>
       </div>
     </div>
-    <div class="copyright">
-      <span>© 2026 Huna Ibra Media Network</span>
-      <span>🇴🇲 ولاية إبراء</span>
-    </div>
+    <div class="copyright"><span>© 2026 Huna Ibra Media Network</span><span>🇴🇲 من قلب ولاية إبراء</span></div>
   </div>
 </footer>
 
 <script>
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-  });
-});
-
-const filters = document.querySelectorAll('.filter');
-const cards = document.querySelectorAll('.directory-card');
-
-filters.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filters.forEach(b => b.classList.remove('active'));
+const filters=document.querySelectorAll('.filter');
+const cards=document.querySelectorAll('.directory-card');
+filters.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filters.forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-
-    cards.forEach(card => {
-      if (filter === 'all' || card.dataset.cat === filter) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+    const filter=btn.dataset.filter;
+    cards.forEach(card=>{
+      card.classList.toggle('hidden',filter!=='all' && card.dataset.cat!==filter);
     });
   });
+});
+
+const menu=document.querySelector('.menu');
+const links=document.querySelector('.links');
+const mobileMenuStyle='display:flex;position:absolute;top:76px;right:14px;left:14px;flex-direction:column;gap:0;background:rgba(251,249,246,.98);padding:12px 20px;border:1px solid rgba(58,39,26,.13);border-radius:20px;box-shadow:0 20px 50px rgba(33,23,15,.12)';
+menu.addEventListener('click',()=>{
+  const open=links.style.display==='flex';
+  if(open){ links.removeAttribute('style'); menu.setAttribute('aria-expanded','false'); }
+  else { links.style.cssText=mobileMenuStyle; menu.setAttribute('aria-expanded','true'); }
+});
+links.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  if(window.innerWidth<=900){ links.removeAttribute('style'); menu.setAttribute('aria-expanded','false'); }
+}));
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>900){ links.removeAttribute('style'); menu.setAttribute('aria-expanded','false'); }
+});
+
+// إذا تعذر تحميل صورة خارجية، نُظهر بطاقة أنيقة بدل صورة مكسورة.
+document.querySelectorAll('img[src^="http"]').forEach(img=>{
+  img.addEventListener('error',()=>{
+    img.classList.add('image-fallback');
+    img.removeAttribute('src');
+    img.alt='صورة غير متاحة حاليًا';
+  },{once:true});
 });
 </script>
 </body>
